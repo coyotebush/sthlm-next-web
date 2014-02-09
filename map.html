@@ -1,30 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Map</title>
+	<title>Nearest</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 </head>
 <body>
-
-<div data-role="page">
-
-	<div data-role="header">
-		<h1>Page Title</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>Page content goes here.</p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
+	<div data-role="page" id="nearestmap" data-title="Nearest">
+		<div data-role="header" data-position="fixed">
+			<h1>Nearest</h1>
+			<a data-role="button" class="ui-btn-right" href="nearest.html">List</a>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a data-role="button" class="ui-btn-active">Nearest</a>
+					</li>
+					<li>
+						<a data-role="button" href="Fav.html">Favorites</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="map" style="position: absolute; top: 78px; bottom: 58px; left: 0; right: 0">
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend></legend>
+				<input type="checkbox" id="mode_b" value="b">
+				<label for="mode_b">B</label>
+				<input type="checkbox" id="mode_t" value="t" checked="checked">
+				<label for="mode_t">T</label>
+				<input type="checkbox" id="mode_j" value="j" checked="checked">
+				<label for="mode_j">J</label>
+				<input type="checkbox" id="mode_l" value="l" checked="checked">
+				<label for="mode_l">L</label>
+				<input type="checkbox" id="mode_w" value="w">
+				<label for="mode_w">W</label>
+			</fieldset>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#nearestmap').on('pageinit', function () {
+			var map = L.map('map').setView([59.33, 18.07], 13);
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+			setTimeout(function () {
+				map.invalidateSize();
+			}, 1);
+		});
+	</script>
 </body>
 </html>
