@@ -1,7 +1,7 @@
 [
   "Coordinates from sv.wikipedia.org (CC-BY-SA)",
   {
-    "typ": "T",
+    "type": "T",
     "number": "11",
     "from": "Kista",
     "to": "Akalla",
@@ -10,7 +10,7 @@
     "lon": 17.941472
   },
   {
-    "typ": "B",
+    "type": "B",
     "number": "509",
     "name": "Solna",
     "to": "Danderyds sjukhus",
