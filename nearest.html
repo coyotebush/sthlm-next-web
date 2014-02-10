@@ -75,7 +75,7 @@
 					if (data[i].name)
 						html += '<li>' + data[i].name + '</li>';
 
-				$('#nearest-list').append(html).enhanceWithin();
+				$('#nearest-list').append(html).listview('refresh');
 			});
 		});
 	</script>
