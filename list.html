@@ -53,8 +53,8 @@ $('#station-items').on('pageinit', function () {
 				var html = '';
 				for (var i = 0; i < data.length; i++)
 					if (data[i].from = 'Kista')
-						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +'  >>>  '  data[i].to + ' - ' + data[i].min + ' min</li>';
-					//	html += '<li>test</li>';
+					//	html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +'  >>>  '  data[i].to + ' - ' + data[i].min + ' min</li>';
+						html += '<li>test</li>';
 
 				$('#station-items-list').append(html).listview('refresh');
 			});
