@@ -53,6 +53,12 @@
 			}).addTo(map);
 			map.locate({setView: true, maxZoom: 16});
 			
+			$.getJSON('data/sample_stations.json', function (data) {
+				for (var i = 0; i < data.length; i++)
+					if (data[i].lat && data[i].lon)
+						L.marker([data[i].lat, data[i].lon]).addTo(map);
+			});
+
 			setTimeout(function () {
 				map.invalidateSize();
 			}, 1);
