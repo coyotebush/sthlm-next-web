@@ -51,9 +51,45 @@
 			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 			}).addTo(map);
+			map.locate({setView: true, maxZoom: 16});
+			
 			setTimeout(function () {
 				map.invalidateSize();
 			}, 1);
+			
+			function onLocationFound(e) {
+    			var radius = e.accuracy / 2;
+
+			    L.marker(e.latlng).addTo(map)
+			        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+				
+				/**
+				 * The function below doens't work. Cross-domain policy prevents it...
+				 */
+				
+				function fetchNearest() {
+					$.ajax({
+						type: 'GET',
+						url: 'https://api.trafiklab.se/samtrafiken/resrobot/StationsInZone.json?apiVersion=2.1&centerX=%2018.0037786&centerY=%2059.325098999999994&radius=10&coordSys=WGS84&key=5ypbRppCxmAKzR0tBAto9BJiFExxyerf',
+						dataType: 'application/json',
+						success: function(data) {
+							console.log(data);
+						},
+						error: function(error) {
+							console.log(error);
+						}
+					
+					});
+				}
+				//fetchNearest();
+				//console.log(lng);
+			    L.circle(e.latlng, radius).addTo(map);
+			}
+			
+			
+
+map.on('locationfound', onLocationFound);
+
 		});
 	</script>
 </body>
