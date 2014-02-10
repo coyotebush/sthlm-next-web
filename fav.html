@@ -48,6 +48,28 @@
 				<li>List Item</li>
 			</ul>
 		</div>
+		
+		<script type="text/javascript">
+		
+
+    
+
+$('#favorit').on('pageinit', function () {
+			$.getJSON('data/sample_fav_list.json', function (data) {
+				$('#favorite-list').empty();
+
+				var html = '';
+				for (var i = 0; i < data.length; i++)
+					if (data[i].name)
+						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +
+						' - ' + data[i].from + ' --> ' + data[i].to + ' - ' + data[i].min + '</li>';
+
+				$('#favorite-list').append(html).listview('refresh');
+			});
+		});
+  
+</script>
+	
 	
 </body>
 </html>
