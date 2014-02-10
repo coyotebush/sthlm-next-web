@@ -47,13 +47,13 @@
     
 
 $('#station-items').on('pageinit', function () {
-			$.getJSON('data/sample_fav_list.json', function (data) {
+			$.getJSON('data/sample_station_items_list.json', function (data) {
 				$('#station-items-list').empty();
 
 				var html = '';
 				for (var i = 0; i < data.length; i++)
-					if (data[i].type)
-						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +' - ' + data[i].from + ' >>>>> ' + data[i].to + ' - ' + data[i].min + ' min</li>';
+					if (data[i].from = 'Kista')
+						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +'  >>>  '  data[i].to + ' - ' + data[i].min + ' min</li>';
 					//	html += '<li>test</li>';
 
 				$('#station-items-list').append(html).listview('refresh');
