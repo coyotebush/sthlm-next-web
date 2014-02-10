@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Favorites</title>
+	<title>Favorite</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,21 +10,44 @@
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 </head>
 <body>
-
-<div data-role="page">
-
-	<div data-role="header">
-		<h1>Page Title</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<p>Page content goes here.</p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
+	<div data-role="page" id="favorite" data-title="Favorite">
+		<div data-role="header" data-position="fixed">
+			<h1>Favorit</h1>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a data-role="button" class="nearest.html">Nearest</a>
+					</li>
+					<li>
+						<a data-role="button" href="ui-btn-active">Favorites</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<ul id="favorite-list" data-role="listview" data-inset="false">
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+		</div>
+	
 </body>
 </html>
