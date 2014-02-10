@@ -1,0 +1,39 @@
+[
+  "Coordinates from sv.wikipedia.org (CC-BY-SA)",
+  {
+    "type": "T",
+    "number": "11",
+    "from": "Kista",
+    "to": "Akalla",
+    "min": "3",
+    "lat": 59.403667,
+    "lon": 17.941472
+  },
+  {
+    "type": "B",
+    "number": "509",
+    "name": "Solna",
+    "to": "Danderyds sjukhus",
+    "min": "5",
+    "lat": 59.409444,
+    "lon": 17.926944
+  },
+  {
+    "type": "T",
+    "number": "11",
+    "name": "Solna",
+    "to": "Kungsträd",
+    "min": "5",
+    "lat": 59.409444,
+    "lon": 17.926944
+  },
+  {
+    "type": "T",
+    "number": "11",
+    "name": "Kista",
+    "to": "Kungsträd",
+    "min": "5",
+    "lat": 59.409444,
+    "lon": 17.926944
+  }
+]
