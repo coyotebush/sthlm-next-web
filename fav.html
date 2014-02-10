@@ -61,7 +61,7 @@ $('#favorite').on('pageinit', function () {
 				var html = '';
 				for (var i = 0; i < data.length; i++)
 					if (data[i].type)
-						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +' - ' + data[i].from + ' --> ' + data[i].to + ' - ' + data[i].min + '</li>';
+						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number +' - ' + data[i].from + ' >>>>> ' + data[i].to + ' - ' + data[i].min + ' min</li>';
 					//	html += '<li>test</li>';
 
 				$('#favorite-list').append(html).listview('refresh');
