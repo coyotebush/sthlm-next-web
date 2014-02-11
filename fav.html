@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 </head>
 <body>
 	<div data-role="page" id="favorite" data-title="Favorite">
@@ -49,11 +51,6 @@
 		</div>
 		
 		<script type="text/javascript">
-		
-
-    
-
-$('#favorite').on('pageinit', function () {
 			$.getJSON('data/sample_fav_list.json', function (data) {
 				$('#favorite-list').empty();
 
@@ -65,9 +62,8 @@ $('#favorite').on('pageinit', function () {
 
 				$('#favorite-list').append(html).listview('refresh');
 			});
-		});
-  
-</script>
+		</script>
+	</div>
 	
 	
 </body>
