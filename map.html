@@ -48,7 +48,7 @@
 			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 			}).addTo(map);
-			map.locate({setView: true, maxZoom: 16});
+			//map.locate({setView: true, maxZoom: 16});
 			
 			$.getJSON('data/sample_stations.json', function (data) {
 				for (var i = 0; i < data.length; i++) {
