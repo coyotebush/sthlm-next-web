@@ -53,7 +53,7 @@
 			$.getJSON('data/sample_stations.json', function (data) {
 				for (var i = 0; i < data.length; i++) {
 					if (data[i].lat && data[i].lon) {
-						L.marker([data[i].lat, data[i].lon]).addTo(map).bindPopup("<a href='list.html'>"+data[i].name+"</a>").openPopup();
+						L.marker([data[i].lat, data[i].lon]).addTo(map).bindPopup("<a href='list.html'>"+data[i].name+"</a>");
 					}
 				}
 			});
