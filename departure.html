@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Departure</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+</head>
+<body>
+	<div data-role="page" id="departure" data-title="List">
+		<div data-role="header" data-position="fixed" >
+		<h1>Kista - T11</h1>
+			<div data-role="navbar">
+			</div>
+		</div>
+		<div data-role="content">
+			<ul id="departure-list" data-role="listview" data-inset="false">
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			$.getJSON('data/sample_departure_list.json', function (data) {
+				$('#departure-list').empty();
+
+				var html = '';
+				for (var i = 0; i < data.length; i++)
+					if (data[i].from === "Kista" )
+						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number + '  >>>  ' + data[i].to + ' - ' + data[i].min + ' min</li>';
+					//	html += '<li>test</li>';
+
+				$('#departure-list').append(html).listview('refresh');
+			});
+		</script>
+	</div>
+	
+	
+</body>
+</html>
