@@ -10,30 +10,30 @@
     "lon": 17.941472
   },
   {
-    "type": "B",
-    "number": "509",
-    "from": "Solna",
-    "to": "Danderyds sjukhus",
-    "min": "5",
-    "lat": 59.409444,
-    "lon": 17.926944
-  },
-  {
     "type": "T",
     "number": "11",
-    "from": "Solna",
-    "to": "Kungsträd",
-    "min": "5",
-    "lat": 59.409444,
-    "lon": 17.926944
+    "from": "Kista",
+    "to": "Akalla",
+    "min": "13",
+    "lat": 59.403667,
+    "lon": 17.941472
   },
   {
     "type": "T",
     "number": "11",
     "from": "Kista",
-    "to": "Kungsträd",
-    "min": "5",
-    "lat": 59.409444,
-    "lon": 17.926944
-  }
+    "to": "Akalla",
+    "min": "23",
+    "lat": 59.403667,
+    "lon": 17.941472
+  },
+  {
+    "type": "T",
+    "number": "11",
+    "from": "Kista",
+    "to": "Akalla",
+    "min": "33",
+    "lat": 59.403667,
+    "lon": 17.941472
+  },
 ]
