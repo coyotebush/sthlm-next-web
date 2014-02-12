@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Favorite</title>
+	<title>Destination</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,14 +12,14 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 </head>
 <body>
-	<div data-role="page" id="station-items" data-title="List">
+	<div data-role="page" id="destination" data-title="List">
 		<div data-role="header" data-position="fixed" >
 		<h1>Kista</h1>
 			<div data-role="navbar">
 			</div>
 		</div>
 		<div data-role="content">
-			<ul id="station-items-list" data-role="listview" data-inset="false">
+			<ul id="destination-list" data-role="listview" data-inset="false">
 				<li>List Item</li>
 				<li>List Item</li>
 				<li>List Item</li>
@@ -44,16 +44,16 @@
 		</div>
 		
 		<script type="text/javascript">
-			$.getJSON('data/sample_station_items_list.json', function (data) {
-				$('#station-items-list').empty();
+			$.getJSON('data/sample_destination_list.json', function (data) {
+				$('#destination-list').empty();
 
 				var html = '';
 				for (var i = 0; i < data.length; i++)
 					if (data[i].from === "Kista" )
-						html += '<li><B>' + data[i].type + '</B> - ' + data[i].number + '  >>>  ' + data[i].to + ' - ' + data[i].min + ' min</li>';
+						html += '<li><a  href="departure.html"><B>' + data[i].type + '</B> - ' + data[i].number + '  >>>  ' + data[i].to + ' - ' + data[i].min + ' min</a></li>';
 					//	html += '<li>test</li>';
 
-				$('#station-items-list').append(html).listview('refresh');
+				$('#destination-list').append(html).listview('refresh');
 			});
 		</script>
 	</div>
