@@ -12,7 +12,7 @@
   {
     "type": "B",
     "number": "509",
-    "name": "Solna",
+    "from": "Solna",
     "to": "Danderyds sjukhus",
     "min": "5",
     "lat": 59.409444,
